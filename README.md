@@ -1,3 +1,3 @@
-# Shopping List App Challenge
+# Quiz App Challenge
 
-This repo contains starter files for the *Shopping List App* challenge.
+This repo contains starter files for the Quiz App challenge.
