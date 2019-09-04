@@ -58,7 +58,8 @@ $(document).ready(function(){
       console.log("hey world");
       $('.next').show();
       $('.submit').hide();
-    } else {
+    } 
+    else {
       alert('Please select an answer');
     }
   });
@@ -86,7 +87,7 @@ $(document).ready(function(){
       $('h2').text(listQuestion.question);
       $('ul.questions-selector').html('');
       for (let i = 0; i < listQuestion.answers.length; i++) {
-        $('ul.questions-selector').append('<li id = "'+i+'">'+listQuestion.answers[i] +'</li>'); //To Do Modify this to use symantic form Tag
+        $('ul.questions-selector').append('<li id = "'+i+'">'+listQuestion.answers[i] +'</li>');
       }
     } else {
       // show summary that says how many you got correct
@@ -102,6 +103,12 @@ $(document).ready(function(){
       $('li.selected').addClass('correct');
     } else {
       $('li.selected').addClass('incorrect');
+      $('ul.questions-selector li').each(function(i) 
+      {if (i == listQuestion.correct){
+        console.log('The correct answer is at index', i);
+      $(this).addClass('correct');
+      }
+      });
     }
     $('.score').text('Current Score: '+score);
     current++;
